@@ -1,20 +1,20 @@
 
 document.write('<br/>');
+var i
+var things = "Schlitz four dollar toast godard truffaut bespoke neutra artisan pop-up. Chia keytar single-origin coffee sustainable disrupt.";
 
-var things = ['Schlitz', 'four', 'dollar', 'toast', 'godard', 'truffaut', 'bespoke', 'neutra', 'artisan', 'pop-up.', 'Chia', 'keytar', 'single-origin', 'coffee', 'sustainable', 'disrupt.'];
 
-document.write(things);
+things = things.split(" ");
+arrayLength = things.length;
 
-var size = Object.keys(things).length;
+
+for(i = 0 ; i < arrayLength; i++)
+	if (things[i].length == 6){
+		document.write(things[i] + '<br/>');
+	};
 
 document.write('<br/>');
 document.write('<br/>');
-
-document.write(size);
-
-document.write('<br/>');
-document.write('<br/>');
-
 
 var movies = [];
 movies.push({
@@ -45,10 +45,3 @@ movies.push({
 
 console.table(movies);
 
-
-var i, item;
-for (i = 0; i < movies.length; i++) {
-    for (item in movies[i]) {
-        document.write(item + ": " + movies[i][item] + "<br>");
-    }
-}
