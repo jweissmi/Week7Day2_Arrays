@@ -1,6 +1,6 @@
 
 document.write('<br/>');
-var i
+var i;
 var things = "Schlitz four dollar toast godard truffaut bespoke neutra artisan pop-up. Chia keytar single-origin coffee sustainable disrupt.";
 
 
@@ -43,5 +43,28 @@ movies.push({
 	stars: ["Leonardo DiCaprio", "JGL"]
 });
 
-console.table(movies);
+var d;
+var cheap_movie = movies.filter(function(d){return d.budget < 100; });
+document.write(JSON.stringify(cheap_movie));
+
+document.write('<br/>');
+document.write('<br/>');
+
+var filtered = [];
+for (var k = 0; k < movies.length; ++k) {
+    var item = movies[k];
+    if (item.budget > 100) filtered.push(item);
+}
+    document.write(JSON.stringify(filtered));
+
+document.write('<br/>');
+document.write('<br/>');
+
+
+var bad = [];
+for (var m = 0; m < movies.length; ++m) {
+    var item = movies[m];
+    if (item.stars.includes('Leonardo DiCaprio')) bad.push(item);
+}
+    document.write(JSON.stringify(bad));
 
